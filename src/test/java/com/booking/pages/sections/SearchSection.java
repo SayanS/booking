@@ -30,4 +30,9 @@ public class SearchSection extends BasePage {
         }
     }
 
+
+    public void selectGuestInfoFromDropdown(String xpathDropdown, String value) {
+        selectFromDropdown($(xpathDropdown),value);
+    }
+
 }

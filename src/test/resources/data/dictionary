@@ -1,0 +1,30 @@
+[
+  {
+    "xpath": "//div[contains(@class,'cross-product-bar__wrapper')]/span/span",
+    "Main menu - Accommodation item": {
+      "En": "Accomodation",
+      "Ru": "Проживание"
+    }
+  },
+  {
+    "xpath":"(//div[contains(@class,'cross-product-bar__wrapper ')]/a/span)[1]",
+    "Main menu - Flights item":{
+      "En":"Flights",
+      "Ru":"Авиабилеты"
+    }
+  },
+  {
+    "xpath":"(//div[contains(@class,'cross-product-bar__wrapper ')]/a/span)[2]",
+    "Main menu - Car rentals item":{
+      "En":"Car rentals",
+      "Ru":"Аренда машин"
+    }
+  },
+  {
+    "xpath":"(//div[contains(@class,'cross-product-bar__wrapper ')]/a/span)[2]",
+    "Main menu - Airport taxis item":{
+      "En":"Airport taxis",
+      "Ru":"Такси от/до аэропорта"
+    }
+  }
+]

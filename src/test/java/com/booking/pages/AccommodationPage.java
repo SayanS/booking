@@ -11,4 +11,8 @@ public class AccommodationPage extends BasePage {
     public SearchSection getSearchSection() {
         return searchSection;
     }
+
+    public void selectCurrentLanguage(String language) {
+        $("(//div[@class='select_foldout_wrap'])[2]//ul/li/a[@hreflang='"+language+"']").click();
+    }
 }
