@@ -50,4 +50,5 @@ public class AccommodationStepDefs {
     public void selectAsCurrentLanguage(String language) {
         accommodationSteps.setCurrentLanguage(language);
     }
+
 }

@@ -4,8 +4,11 @@ import com.booking.pages.AccommodationPage;
 import com.booking.pages.xpath.AccommodationXpath;
 import net.thucydides.core.annotations.Step;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Properties;
 
 import static com.booking.pages.xpath.AccommodationXpath.*;
 
@@ -15,7 +18,15 @@ public class AccommodationSteps {
 
     @Step
     public void isAccommodationPage() {
-        accommodationPage.open(new String[]{"https://www.booking.com/"});
+        Properties prop=new Properties();
+        InputStream input = null;
+        try {
+            input = new FileInputStream("serenity.properties");
+            prop.load(input);
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+        }
+        accommodationPage.openUrl(prop.getProperty("webdriver.base.url"));
     }
 
     @Step

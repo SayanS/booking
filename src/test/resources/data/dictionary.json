@@ -1,0 +1,53 @@
+{
+  "Main menu items": {
+    "xpath": "//div[@class='cross-product-bar__wrapper ']/*/span",
+    "en-us": [
+      "Accommodations",
+      "Flights",
+      "Car Rentals",
+      "Airport Taxis"
+    ],
+    "ru": [
+      "Проживание",
+      "Авиабилеты",
+      "Аренда машин",
+      "Такси от/до аэропорта"
+    ],
+    "sl": [
+      "Nastanitve",
+      "Leti",
+      "Najem vozil",
+      "Letališki taksiji"
+    ]
+  },
+  "Search section title": {
+    "xpath": "//div[@class='xpi__searchbox']/h2/span",
+    "en-us": ["Find Deals for Any Season"],
+    "ru": ["Найдите лучшие предложения"],
+    "sl": ["Nájdite ponuky na akékoľvek ročné obdobie"]
+  },
+  "Search section sub title": {
+    "xpath": "//div[contains(@class,'sb-searchbox__subtitle-text')]",
+    "en-us": ["From cozy country homes to funky city apartments"],
+    "ru": ["От уютных загородных домов до стильных городских квартир"],
+    "sl": ["Od útulných vidieckych domov až po štýlové mestské apartmány"]
+  },
+  "Accommodation page - Top header buttons": {
+    "xpath": "//div[@id='top']//div/span[1]",
+    "en-us": [
+      "List Your Property",
+      "Register\n– opens a dialog box",
+      "Sign in\n– opens a dialog box"
+    ],
+    "ru": [
+      "Зарегистрировать свой объект",
+      "Зарегистрироваться\n- откроется в диалоговом окне",
+      "Войти в аккаунт\n- откроется в диалоговом окне"
+    ],
+    "sl": [
+      "Registrujte svoje ubytovanie",
+      "Registrujte sa\n– otvorí dialógové okno",
+      "Prihlásiť sa\n– otvorí dialógové okno"
+    ]
+  }
+}
