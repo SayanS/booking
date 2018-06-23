@@ -3,6 +3,7 @@ package com.booking.steps.serenity;
 import com.booking.pages.AccommodationPage;
 import com.booking.pages.xpath.AccommodationXpath;
 import net.thucydides.core.annotations.Step;
+import org.junit.Assert;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -68,5 +69,20 @@ public class AccommodationSteps {
         accommodationPage.clickOn(AccommodationXpath.HEADER_SELECT_LANGUAGE_BUTTON);
         accommodationPage.selectCurrentLanguage(language);
         int i=0;
+    }
+
+    @Step
+    public void clickOnSelectLanguageButton() {
+        accommodationPage.clickOn(AccommodationXpath.HEADER_SELECT_LANGUAGE_BUTTON);
+    }
+
+    @Step
+    public void isCurrentLanguageInLanguageSelectorPopup(String language) {
+        Assert.assertTrue(accommodationPage.getSelectLanguagePopUp().isCurrentLanguage(language));
+    }
+
+    @Step
+    public void isImageShownOnCurrentLanguageButton(String imageUrl) {
+        Assert.assertEquals(imageUrl,accommodationPage.getAttribute(AccommodationXpath.HEADER_SELECT_LANGUAGE_BUTTON_IMAGE,"src"));
     }
 }

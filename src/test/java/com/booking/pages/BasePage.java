@@ -71,4 +71,7 @@ public class BasePage extends PageObject {
         actions.moveToElement(webElementFacade).perform();
     }
 
+    public String getAttribute(String xpath, String attribute) {
+        return $(xpath).getAttribute(attribute);
+    }
 }

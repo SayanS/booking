@@ -3,6 +3,7 @@ package com.booking.pages.xpath;
 public interface AccommodationXpath {
 
     final public static String HEADER_SELECT_LANGUAGE_BUTTON="//li[@data-id='language_selector']";
+    final public static String HEADER_SELECT_LANGUAGE_BUTTON_IMAGE="//li[@data-id='language_selector']/a/img";
 
     final public static String SEARCH_SECTION_CHECKIN_DATE_BUTTON="//div[@data-calendar2-type='checkin']";
     final public static String SEARCH_SECTION_CHECKOUT_DATE_BUTTON="//div[@data-calendar2-type='checkout']";
@@ -19,5 +20,7 @@ public interface AccommodationXpath {
     final public static String SEARCH_SECTION_GUEST_INFO_AGES_DROPDOWN="(//select[@name='age'])";
 
     final public static String SEARCH_SECTION_SEARCH_BUTTON="//div[contains(@class,'sb-searchbox-submit-col -submit-button')]/button";
+
+
 
 }

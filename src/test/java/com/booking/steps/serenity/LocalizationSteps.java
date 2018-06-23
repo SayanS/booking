@@ -17,6 +17,7 @@ public class LocalizationSteps {
     public void isSectionTranslatedInto(String sectionName, String language) throws IOException {
         JsonNode dictionary;
         List<String> expectedValues=new ArrayList<>();
+
         dictionary=mapper.readTree(new File("./src/test/resources/data/dictionary.json"));
 
         dictionary.get(sectionName).get(language).forEach(value->expectedValues.add(value.asText()));

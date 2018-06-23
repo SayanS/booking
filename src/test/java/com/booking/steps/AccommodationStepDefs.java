@@ -2,6 +2,7 @@ package com.booking.steps;
 
 import com.booking.steps.serenity.AccommodationSteps;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 
@@ -42,7 +43,7 @@ public class AccommodationStepDefs {
     }
 
     @When("^Click on Search destination button$")
-    public void clickOnSearchDestinationButton(){
+    public void clickOnSearchDestinationButton() {
         accommodationSteps.clickOnSearchDestinationButton();
     }
 
@@ -51,4 +52,18 @@ public class AccommodationStepDefs {
         accommodationSteps.setCurrentLanguage(language);
     }
 
+    @When("^Click on Select language button in Header$")
+    public void clickOnSelectLanguageButtonInHeader() {
+        accommodationSteps.clickOnSelectLanguageButton();
+    }
+
+    @Then("^Item \"([^\"]*)\" should be shown as selected in Language selector popup$")
+    public void itemShouldBeShownAsSelectedInLanguageSelectorPopup(String language) {
+        accommodationSteps.isCurrentLanguageInLanguageSelectorPopup(language);
+    }
+
+    @Then("^Current language button in Header should be shown with the image \"([^\"]*)\"$")
+    public void currentLanguageButtonInHeaderShouldBeShownWithTheImage(String imageUrl) {
+        accommodationSteps.isImageShownOnCurrentLanguageButton(imageUrl);
+    }
 }
