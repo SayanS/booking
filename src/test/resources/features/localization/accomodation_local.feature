@@ -10,7 +10,7 @@ Feature: Checking localization of Accommodation page
     Examples:
       | language |
       | ru       |
-      | en-us    |
+      | en-gb    |
       | sl       |
 
   Scenario Outline: Check that current language is displayed as selected in the Language selector popup
@@ -22,7 +22,7 @@ Feature: Checking localization of Accommodation page
     Examples:
       | language | imageUrl                                                                                     |
       | ru       | https://t-ec.bstatic.com/static/img/flags/24/ru/88fbb4ed75a0daae6222ed2426e26cef1537eecd.png |
-      | en-us    | https://t-ec.bstatic.com/static/img/flags/24/us/e39c170c852301a1817b3d0833be23f677a2f922.png |
+      | en-gb    | https://t-ec.bstatic.com/static/img/flags/24/us/e39c170c852301a1817b3d0833be23f677a2f922.png |
       | sl       | https://t-ec.bstatic.com/static/img/flags/24/si/1796c97012113899bba68e2688ad03e53860819a.png |
 
 

@@ -1,5 +1,7 @@
 package com.booking.pages;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Function;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
@@ -10,6 +12,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,5 +77,20 @@ public class BasePage extends PageObject {
 
     public String getAttribute(String xpath, String attribute) {
         return $(xpath).getAttribute(attribute);
+    }
+
+    public String getCurrentLanguage(){
+        return getDriver().findElement(By.xpath("//html")).getAttribute("lang");
+    }
+
+    public String getCurrentLangTranslation(String dictionaryPath, String text){
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode dictionary=null;
+        try {
+            dictionary=mapper.readTree(new File(dictionaryPath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return dictionary.get(text).get(getCurrentLanguage()).textValue();
     }
 }

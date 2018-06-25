@@ -13,8 +13,8 @@ import java.util.List;
 public class LocalizationSteps {
     BasePage basePage;
 
-    ObjectMapper mapper = new ObjectMapper();
     public void isSectionTranslatedInto(String sectionName, String language) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
         JsonNode dictionary;
         List<String> expectedValues=new ArrayList<>();
 
