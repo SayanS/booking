@@ -93,4 +93,8 @@ public class BasePage extends PageObject {
         }
         return dictionary.get(text).get(getCurrentLanguage()).textValue();
     }
+
+    public void selectFromDropDownByValue(String xpath, String value){
+        $(xpath).selectByValue(value);
+    }
 }

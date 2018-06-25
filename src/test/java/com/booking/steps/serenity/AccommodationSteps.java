@@ -55,7 +55,7 @@ public class AccommodationSteps {
         accommodationPage.getSearchSection().selectGuestInfoFromDropdown(SEARCH_SECTION_GUEST_INFO_ROOMS_DROPDOWN, rooms);
         for (int i = 0; i < chldAges.size(); i++) {
             accommodationPage.getSearchSection()
-                    .selectGuestInfoFromDropdown(SEARCH_SECTION_GUEST_INFO_AGES_DROPDOWN + "[" + (i + 1) + "]", chldAges.get(i) + " years old");
+                    .selectFromDropDownByValue(SEARCH_SECTION_GUEST_INFO_AGES_DROPDOWN  + "[" + (i + 1) + "]",chldAges.get(i));
         }
     }
 
