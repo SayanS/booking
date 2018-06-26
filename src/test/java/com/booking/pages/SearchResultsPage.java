@@ -2,6 +2,7 @@ package com.booking.pages;
 
 public class SearchResultsPage extends BasePage {
     private String dictionaryPathFilter = "./src/test/resources/data/SearchResultsFiltersDictionary.json";
+    final public String PAGE_TITLE="//h1";
 
     public void selectFilterOption(String filterName, String optionNum) {
         String filterContainerXpath = "//p[contains(text(),'" + getCurrentLangTranslation(dictionaryPathFilter, filterName) + "') and @class='filtercategory-title']/ancestor::div[2]";

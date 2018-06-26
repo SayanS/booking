@@ -6,7 +6,6 @@ import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 
 import java.io.FileInputStream;
-import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Properties;
@@ -20,10 +19,8 @@ public class AccommodationSteps {
     @Step
     public void isAccommodationPage() {
         Properties prop=new Properties();
-        InputStream input = null;
         try {
-            input = new FileInputStream("serenity.properties");
-            prop.load(input);
+            prop.load(new FileInputStream("serenity.properties"));
         } catch (java.io.IOException e) {
             e.printStackTrace();
         }
